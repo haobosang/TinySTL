@@ -6,17 +6,13 @@
  ************************************************************************/
 
 #include<iostream>
-#include<vector>
+#include"MyVector.h"
 #include<memory>
 #include<stdlib.h>
 #include<unistd.h>
 int main(){
-    std::vector<int ,std::allocator<int>> v(0);
-    for(size_t i=0;i<30;i++)
-    {
-        sleep(1);
-        v.push_back(i);
-        std::cout<<"size"<<v.get_allocator().new_allocator<<std::endl;
-    }
+    //std::vector<int ,std::allocator<int>> v(0);
+    TinySTL::vector<int> v;
+    std::cout<<v.size();
     return 0;
 }
